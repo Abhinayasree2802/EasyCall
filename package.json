@@ -1,0 +1,19 @@
+{
+  "name": "easycall",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently --kill-others \"cd client && npm start\" \"cd server && nodemon index.js\"",
+    "dev:install": "npm i && concurrently \"cd client && npm i\" \"cd server && npm i\"",
+    "dev:update": "npm update && concurrently \"cd client && npm update\" \"cd server && npm update\"",
+    "lint": "concurrently \"cd client && npm run pretest\" \"cd server && npm run pretest\"",
+    "server-prod": "cd server && npm i && npm run start"
+  },
+  "keywords": [],
+  "author": "apoorv",
+  "license": "AGPL 3.0 License",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "husky": "^7.0.4"
+  }
+}
